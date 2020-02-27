@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import axios from 'axios';
+import Art from './Art';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super();
+
+    this.state={
+      art: [],
+      isLoading: true,
+    }
+  }
+
+  componentDidMount(){
+    axios({
+      method:'GET',
+      url:'https://www.rijksmuseum.nl/api/en/collection/',
+      params:{
+        key:'0IM9KPlr',
+        format:'json'
+      }
+    }).then((response)=>{
+      response=response.data.artObjects;
+      this.setState({
+        art:response,
+        isLoading:false
+      })
+    })
+  }
+
+  render() {
+    return (
+      <div className='App'>
+        { this.state.isLoading ? <p>loading...</p>:
+          //making a function component as opposed to a class component. (basically turning this into a JS function)
+          this.state.art.map((item)=>{
+            return (
+              <Art
+                key={item.id}
+                imgUrl={item.webImage.url} 
+                title={item.title}
+                longTitle={item.longTitle}
+              />
+            )
+          })
+        }
+      </div>
+    );
+  }
 }
 
 export default App;
