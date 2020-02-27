@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rijks-code-along/static/css/main.05746ab6.chunk.css",
+    "main.js": "/rijks-code-along/static/js/main.8c106b1a.chunk.js",
+    "main.js.map": "/rijks-code-along/static/js/main.8c106b1a.chunk.js.map",
+    "runtime-main.js": "/rijks-code-along/static/js/runtime-main.f5adffe8.js",
+    "runtime-main.js.map": "/rijks-code-along/static/js/runtime-main.f5adffe8.js.map",
+    "static/js/2.e9fb820f.chunk.js": "/rijks-code-along/static/js/2.e9fb820f.chunk.js",
+    "static/js/2.e9fb820f.chunk.js.map": "/rijks-code-along/static/js/2.e9fb820f.chunk.js.map",
+    "index.html": "/rijks-code-along/index.html",
+    "precache-manifest.e050fdb597475c628ea4589d74d8b1c6.js": "/rijks-code-along/precache-manifest.e050fdb597475c628ea4589d74d8b1c6.js",
+    "service-worker.js": "/rijks-code-along/service-worker.js",
+    "static/css/main.05746ab6.chunk.css.map": "/rijks-code-along/static/css/main.05746ab6.chunk.css.map",
+    "static/js/2.e9fb820f.chunk.js.LICENSE.txt": "/rijks-code-along/static/js/2.e9fb820f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5adffe8.js",
+    "static/js/2.e9fb820f.chunk.js",
+    "static/css/main.05746ab6.chunk.css",
+    "static/js/main.8c106b1a.chunk.js"
+  ]
+}
